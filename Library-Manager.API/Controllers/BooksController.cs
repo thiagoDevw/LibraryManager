@@ -1,4 +1,6 @@
-﻿using Library_Manager.API.Models;
+﻿using Library_Manager.API.Entities;
+using Library_Manager.API.Models;
+using Library_Manager.API.Persistence;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -8,23 +10,39 @@ namespace Library_Manager.API.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
+        private readonly LibraryDbContext _context;
+        public BooksController(LibraryDbContext context) 
+        { 
+            _context = context;
+        }
+
         //api/livros?quey=net core
         [HttpGet]
         public IActionResult Get(string query)
         {
-            return Ok();
+            var books = _context.Books 
+                .Where(b => b.Title.Contains(query) || b.ISBN.Contains(query))
+                .ToList();
+
+            if (!books.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(books);
         }
 
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            if (id == null)
+            var book = _context.Books.Find(id);
+            if (book == null)
             {
                 return NotFound();
             }
 
-            return Ok();
+            return Ok(book);
         }
 
         [HttpPost]
@@ -34,6 +52,18 @@ namespace Library_Manager.API.Controllers
             {
                 return BadRequest();
             }
+
+            var book = new Book
+            {
+                Title = createBook.Title,
+                ISBN = createBook.ISBN,
+                Year = createBook.YearOfPublication,
+                AuthorId = createBook.AuthorId
+            };
+
+            _context.Books.Add(book);
+            _context.SaveChanges();
+
             return CreatedAtAction(nameof(GetById), new { id = createBook.Id }, createBook);
         }
 
@@ -45,12 +75,36 @@ namespace Library_Manager.API.Controllers
                 return BadRequest();
             }
 
+            var book = _context.Books.Find(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            book.Title = createBook.Title;
+            book.ISBN = createBook.ISBN;
+            book.Year = createBook.YearOfPublication;
+            book.AuthorId = createBook.AuthorId;
+
+            _context.Books.Update(book);
+            _context.SaveChanges();
+
             return NoContent();
         }
 
+        // DELETE: api/books/{id}
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
+            var book = _context.Books.Find(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            _context.Books.Remove(book);
+            _context.SaveChanges();
+
             return NoContent();
         }
     }
