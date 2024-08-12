@@ -64,7 +64,7 @@ namespace Library_Manager.API.Controllers
             _context.Books.Add(book);
             _context.SaveChanges();
 
-            return CreatedAtAction(nameof(GetById), new { id = createBook.Id }, createBook);
+            return CreatedAtAction(nameof(GetById), new { id = book.Id }, book);
         }
 
         [HttpPut("{id}")]

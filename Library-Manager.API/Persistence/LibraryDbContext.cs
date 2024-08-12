@@ -34,7 +34,7 @@ namespace Library_Manager.API.Persistence
 
                     e.HasOne(b => b.Author)
                         .WithMany(b => b.Books)
-                        .HasForeignKey(b => b.Author.Id)
+                        .HasForeignKey(b => b.AuthorId)
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
