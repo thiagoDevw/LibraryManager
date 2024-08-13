@@ -41,9 +41,7 @@ namespace Library_Manager.API.Controllers
             var user = new User
             {
                 Name = model.Name,
-                Email = model.Email,
-                Password = model.Password,
-                Phone = model.Phone
+                Email = model.Email
             };
 
             _context.Users.Add(user);
@@ -69,8 +67,7 @@ namespace Library_Manager.API.Controllers
 
             user.Name = model.Name;
             user.Email = model.Email;
-            user.Password = model.Password;
-            user.Phone = model.Phone;
+
 
             _context.Users.Update(user);
             _context.SaveChanges();

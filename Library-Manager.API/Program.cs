@@ -6,7 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<LibraryDbContext>(o => o.UseInMemoryDatabase("LibraryDb"));
+//builder.Services.AddDbContext<LibraryDbContext>(o => o.UseInMemoryDatabase("LibraryDb"));
+var connectionString = builder.Configuration.GetConnectionString("LibraryManagerCs");
+builder.Services.AddDbContext<LibraryDbContext>(o => o.UseSqlServer(connectionString));
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>

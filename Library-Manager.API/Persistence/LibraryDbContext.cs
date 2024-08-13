@@ -51,14 +51,6 @@ namespace Library_Manager.API.Persistence
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    e.Property(u => u.Password)
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    e.Property(u => u.Phone)
-                        .IsRequired()
-                        .HasMaxLength(15);
-
                     e.HasMany(u => u.Loans)
                         .WithOne(l => l.User)
                         .HasForeignKey(u => u.UserId)

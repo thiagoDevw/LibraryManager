@@ -22,11 +22,12 @@ namespace Library_Manager.API.Controllers
             var loan = _context.Loans
                 .Include(l => l.Book)
                 .Include(l => l.User)
+                .AsNoTracking()
                 .FirstOrDefault(l => l.Id == id);
 
             if (loan == null)
             {
-                return NotFound("Empréstio não encontrado. ");
+                return NotFound("Empréstimo não encontrado. ");
             }
 
             var loanDto = new LoanDto
@@ -89,7 +90,7 @@ namespace Library_Manager.API.Controllers
                 ReturnDate = loan.ReturnDate
             };
 
-            return CreatedAtAction(nameof(GetLoanById), new { id = loan.Id }, loan);
+            return CreatedAtAction(nameof(GetLoanById), new { id = loan.Id }, loanDto);
         }
 
         [HttpPut("return/{id}")]
@@ -99,6 +100,11 @@ namespace Library_Manager.API.Controllers
             if (loan == null)
             {
                 return NotFound("Empréstimo não encontrado. ");
+            }
+
+            if (returnDate < loan.LoanDate)
+            {
+                return BadRequest("A data de devolução não pode ser anterior à data do empréstimo.");
             }
 
             loan.ReturnDate = returnDate;
@@ -115,7 +121,22 @@ namespace Library_Manager.API.Controllers
             else
             {
                 return Ok("Livro devolvido no prazo.");
+            } 
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteLoan(int id)
+        {
+            var loan = _context.Loans.Find(id);
+            if (loan == null)
+            {
+                return NotFound();
             }
+
+            _context.Loans.Remove(loan);
+            _context.SaveChanges();
+
+            return NoContent();
         }
     }
 }
