@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "S:\\Library Manager\\Library-Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\persistence\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\persistence\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\controllers\\loancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\controllers\\loancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\entities\\loandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\entities\\loandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\entities\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\entities\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +29,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\models\\createloanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\models\\createloanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\persistence\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\persistence\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,24 +55,12 @@
       "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\models\\createusermodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\models\\createbookmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\models\\createbookmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\library-manager.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\library-manager.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\models\\createloanmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\models\\createloanmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|s:\\library manager\\library-manager\\library-manager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7F5A9157-4C49-4688-A88B-FA0365E05BCC}|Library-Manager.API\\Library-Manager.API.csproj|solutionrelative:library-manager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,24 +70,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoanDto.cs",
+              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\LoanDto.cs",
+              "RelativeDocumentMoniker": "Library-Manager.API\\Entities\\LoanDto.cs",
+              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\LoanDto.cs",
+              "RelativeToolTip": "Library-Manager.API\\Entities\\LoanDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T23:27:39.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Loan.cs",
+              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\Loan.cs",
+              "RelativeDocumentMoniker": "Library-Manager.API\\Entities\\Loan.cs",
+              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\Loan.cs",
+              "RelativeToolTip": "Library-Manager.API\\Entities\\Loan.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T13:23:21.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Library-Manager.API\\appsettings.json",
+              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\appsettings.json",
+              "RelativeToolTip": "Library-Manager.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-07T23:38:04.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LoanController.cs",
+              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Controllers\\LoanController.cs",
+              "RelativeDocumentMoniker": "Library-Manager.API\\Controllers\\LoanController.cs",
+              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Controllers\\LoanController.cs",
+              "RelativeToolTip": "Library-Manager.API\\Controllers\\LoanController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowFkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T22:02:10.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Program.cs",
+              "RelativeDocumentMoniker": "Library-Manager.API\\Program.cs",
+              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Program.cs",
+              "RelativeToolTip": "Library-Manager.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T20:41:48.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "LibraryDbContext.cs",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Persistence\\LibraryDbContext.cs",
               "RelativeDocumentMoniker": "Library-Manager.API\\Persistence\\LibraryDbContext.cs",
               "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Persistence\\LibraryDbContext.cs",
               "RelativeToolTip": "Library-Manager.API\\Persistence\\LibraryDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAArAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wFcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T00:47:14.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "UsersController.cs",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Library-Manager.API\\Controllers\\UsersController.cs",
@@ -92,46 +165,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Program.cs",
-              "RelativeDocumentMoniker": "Library-Manager.API\\Program.cs",
-              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Program.cs",
-              "RelativeToolTip": "Library-Manager.API\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T20:41:48.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "BooksController.cs",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Library-Manager.API\\Controllers\\BooksController.cs",
               "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Library-Manager.API\\Controllers\\BooksController.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAIwEIAAABQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T22:00:12.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Loan.cs",
-              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\Loan.cs",
-              "RelativeDocumentMoniker": "Library-Manager.API\\Entities\\Loan.cs",
-              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\Loan.cs",
-              "RelativeToolTip": "Library-Manager.API\\Entities\\Loan.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "CreateLoanModel.cs",
+              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Models\\CreateLoanModel.cs",
+              "RelativeDocumentMoniker": "Library-Manager.API\\Models\\CreateLoanModel.cs",
+              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Models\\CreateLoanModel.cs",
+              "RelativeToolTip": "Library-Manager.API\\Models\\CreateLoanModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T13:23:21.823Z",
+              "WhenOpened": "2024-08-07T23:35:17.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Book.cs",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\Book.cs",
               "RelativeDocumentMoniker": "Library-Manager.API\\Entities\\Book.cs",
@@ -139,12 +199,11 @@
               "RelativeToolTip": "Library-Manager.API\\Entities\\Book.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T10:50:24.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T10:50:24.074Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Library-Manager.API\\Entities\\BaseEntity.cs",
@@ -152,12 +211,11 @@
               "RelativeToolTip": "Library-Manager.API\\Entities\\BaseEntity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T10:42:26.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T10:42:26.281Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "User.cs",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Library-Manager.API\\Entities\\User.cs",
@@ -165,12 +223,11 @@
               "RelativeToolTip": "Library-Manager.API\\Entities\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T10:54:22.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T10:54:22.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "CreateUserModels.cs",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Models\\CreateUserModels.cs",
               "RelativeDocumentMoniker": "Library-Manager.API\\Models\\CreateUserModels.cs",
@@ -178,12 +235,11 @@
               "RelativeToolTip": "Library-Manager.API\\Models\\CreateUserModels.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T23:35:51.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T23:35:51.982Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "CreateBookModels.cs",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Models\\CreateBookModels.cs",
               "RelativeDocumentMoniker": "Library-Manager.API\\Models\\CreateBookModels.cs",
@@ -195,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Library-Manager.API.csproj",
               "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Library-Manager.API.csproj",
               "RelativeDocumentMoniker": "Library-Manager.API\\Library-Manager.API.csproj",
@@ -204,30 +260,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-08-09T11:42:36.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CreateLoanModels.cs",
-              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Models\\CreateLoanModels.cs",
-              "RelativeDocumentMoniker": "Library-Manager.API\\Models\\CreateLoanModels.cs",
-              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\Models\\CreateLoanModels.cs",
-              "RelativeToolTip": "Library-Manager.API\\Models\\CreateLoanModels.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T23:35:17.108Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\appsettings.json",
-              "RelativeDocumentMoniker": "Library-Manager.API\\appsettings.json",
-              "ToolTip": "S:\\Library Manager\\Library-Manager\\Library-Manager.API\\appsettings.json",
-              "RelativeToolTip": "Library-Manager.API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-07T23:38:04.922Z"
             }
           ]
         }

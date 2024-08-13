@@ -6,7 +6,7 @@ namespace Library_Manager.API.Persistence
     public class LibraryDbContext : DbContext
     {
         public LibraryDbContext(DbContextOptions<LibraryDbContext> options)
-            : base (options)
+            : base(options)
         {
 
         }
@@ -25,7 +25,7 @@ namespace Library_Manager.API.Persistence
                     e.Property(b => b.Title)
                         .IsRequired()
                         .HasMaxLength(50);
-                     
+
                     e.HasIndex(b => b.ISBN)
                         .IsUnique();
 
@@ -73,17 +73,16 @@ namespace Library_Manager.API.Persistence
                     e.Property(l => l.LoanDate)
                         .IsRequired();
 
-                    e.Property(l => l.ReturnDate)
-                        .IsRequired(false);
-
-                    e.HasOne(l => l.User)
-                        .WithMany(u => u.Loans)
-                        .HasForeignKey(u => u.UserId)
-                        .OnDelete(DeleteBehavior.Restrict);
+                    e.Property(l => l.ReturnDate);
 
                     e.HasOne(l => l.Book)
                         .WithMany(b => b.Loans)
                         .HasForeignKey(l => l.BookId)
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    e.HasOne(l => l.User)
+                        .WithMany(u => u.Loans)
+                        .HasForeignKey(u => u.UserId)
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
