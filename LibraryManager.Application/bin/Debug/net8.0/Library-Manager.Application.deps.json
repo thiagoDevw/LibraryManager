@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Library-Manager.Application/1.0.0": {
+        "dependencies": {
+          "Library-Manager.Core": "1.0.0",
+          "Library-Manager.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "Library-Manager.Application.dll": {}
+        }
+      },
+      "Library-Manager.Core/1.0.0": {
+        "runtime": {
+          "Library-Manager.Core.dll": {}
+        }
+      },
+      "Library-Manager.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Library-Manager.Core": "1.0.0"
+        },
+        "runtime": {
+          "Library-Manager.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Library-Manager.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Library-Manager.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Library-Manager.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

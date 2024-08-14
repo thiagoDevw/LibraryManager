@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library-Manager.API", "Library-Manager.API\Library-Manager.API.csproj", "{7F5A9157-4C49-4688-A88B-FA0365E05BCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library-Manager.API", "Library-Manager.API\Library-Manager.API.csproj", "{7F5A9157-4C49-4688-A88B-FA0365E05BCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library-Manager.Application", "LibraryManager.Application\Library-Manager.Application.csproj", "{2A1CA546-E308-4427-BD91-F9674BD6DA25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library-Manager.Infrastructure", "Library-Manager.Infrastructure\Library-Manager.Infrastructure.csproj", "{92A8A68F-20A4-40EC-9AD7-66A45AC13349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library-Manager.Core", "Library-Manager.Core\Library-Manager.Core.csproj", "{E25C137C-55DB-4643-BB4C-FFDF9E6986A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{7F5A9157-4C49-4688-A88B-FA0365E05BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F5A9157-4C49-4688-A88B-FA0365E05BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F5A9157-4C49-4688-A88B-FA0365E05BCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A1CA546-E308-4427-BD91-F9674BD6DA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1CA546-E308-4427-BD91-F9674BD6DA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1CA546-E308-4427-BD91-F9674BD6DA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1CA546-E308-4427-BD91-F9674BD6DA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A8A68F-20A4-40EC-9AD7-66A45AC13349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A8A68F-20A4-40EC-9AD7-66A45AC13349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A8A68F-20A4-40EC-9AD7-66A45AC13349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A8A68F-20A4-40EC-9AD7-66A45AC13349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25C137C-55DB-4643-BB4C-FFDF9E6986A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25C137C-55DB-4643-BB4C-FFDF9E6986A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25C137C-55DB-4643-BB4C-FFDF9E6986A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25C137C-55DB-4643-BB4C-FFDF9E6986A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

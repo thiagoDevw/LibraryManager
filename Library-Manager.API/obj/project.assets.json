@@ -1593,6 +1593,43 @@
             "rid": "win"
           }
         }
+      },
+      "Library-Manager.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Library-Manager.Core": "1.0.0",
+          "Library-Manager.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Library-Manager.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library-Manager.Application.dll": {}
+        }
+      },
+      "Library-Manager.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Library-Manager.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library-Manager.Core.dll": {}
+        }
+      },
+      "Library-Manager.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Library-Manager.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Library-Manager.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library-Manager.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -4505,10 +4542,28 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Library-Manager.Application/1.0.0": {
+      "type": "project",
+      "path": "../LibraryManager.Application/Library-Manager.Application.csproj",
+      "msbuildProject": "../LibraryManager.Application/Library-Manager.Application.csproj"
+    },
+    "Library-Manager.Core/1.0.0": {
+      "type": "project",
+      "path": "../Library-Manager.Core/Library-Manager.Core.csproj",
+      "msbuildProject": "../Library-Manager.Core/Library-Manager.Core.csproj"
+    },
+    "Library-Manager.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Library-Manager.Infrastructure/Library-Manager.Infrastructure.csproj",
+      "msbuildProject": "../Library-Manager.Infrastructure/Library-Manager.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Library-Manager.Application >= 1.0.0",
+      "Library-Manager.Core >= 1.0.0",
+      "Library-Manager.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.7",
       "Microsoft.EntityFrameworkCore.InMemory >= 8.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.7",
@@ -4547,7 +4602,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "S:\\Library Manager\\Library-Manager\\Library-Manager.Core\\Library-Manager.Core.csproj": {
+              "projectPath": "S:\\Library Manager\\Library-Manager\\Library-Manager.Core\\Library-Manager.Core.csproj"
+            },
+            "S:\\Library Manager\\Library-Manager\\Library-Manager.Infrastructure\\Library-Manager.Infrastructure.csproj": {
+              "projectPath": "S:\\Library Manager\\Library-Manager\\Library-Manager.Infrastructure\\Library-Manager.Infrastructure.csproj"
+            },
+            "S:\\Library Manager\\Library-Manager\\LibraryManager.Application\\Library-Manager.Application.csproj": {
+              "projectPath": "S:\\Library Manager\\Library-Manager\\LibraryManager.Application\\Library-Manager.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4603,7 +4668,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

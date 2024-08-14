@@ -1,0 +1,16 @@
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\bin\Debug\net8.0\Library-Manager.Infrastructure.deps.json
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\bin\Debug\net8.0\Library-Manager.Infrastructure.dll
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\bin\Debug\net8.0\Library-Manager.Infrastructure.pdb
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\bin\Debug\net8.0\Library-Manager.Core.dll
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\bin\Debug\net8.0\Library-Manager.Core.pdb
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.csproj.AssemblyReference.cache
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.AssemblyInfoInputs.cache
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.AssemblyInfo.cs
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.csproj.CoreCompileInputs.cache
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.sourcelink.json
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-.DAEA174A.Up2Date
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.dll
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\refint\Library-Manager.Infrastructure.dll
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.pdb
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\ref\Library-Manager.Infrastructure.dll
