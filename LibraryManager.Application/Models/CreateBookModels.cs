@@ -1,4 +1,4 @@
-﻿namespace Library_Manager.API.Models
+﻿namespace Library_Manager.Application.Models
 {
     public class CreateBookModels
     {

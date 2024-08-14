@@ -14,3 +14,5 @@ S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8
 S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\refint\Library-Manager.Infrastructure.dll
 S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.pdb
 S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\ref\Library-Manager.Infrastructure.dll
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\bin\Debug\net8.0\Library-Manager.Infrastructure.runtimeconfig.json
+S:\Library Manager\Library-Manager\Library-Manager.Infrastructure\obj\Debug\net8.0\Library-Manager.Infrastructure.genruntimeconfig.cache
