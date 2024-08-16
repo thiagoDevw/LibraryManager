@@ -16,6 +16,13 @@ namespace Library_Manager.Application.Models
 
         public bool IsSuccess { get; private set; }
         public string Message { get; private set; }
+
+        public static ResultViewModel Success (string message = "")
+            => new ResultViewModel(true, message);
+        public static ResultViewModel Error(string message)
+            => new ResultViewModel(false, message);
+        public static ResultViewModel NotFound(string message)
+            => Error(message);
     }
 
     public class ResultViewModel<T> : ResultViewModel
@@ -26,5 +33,11 @@ namespace Library_Manager.Application.Models
             Data = data;
         }
         public T? Data { get; private set; }
+        public static ResultViewModel<T> Success(T data, string message = "")
+            => new ResultViewModel<T>(data, true, message);
+        public static ResultViewModel<T> Error(string message)
+            => new(default, false, message);
+        public static ResultViewModel<T> NotFound(string message)
+            => Error(message);
     }
 }
