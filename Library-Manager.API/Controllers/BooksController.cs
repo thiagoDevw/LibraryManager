@@ -1,4 +1,5 @@
 ﻿using Library_Manager.Application.Models;
+using Library_Manager.Application.Services;
 using Library_Manager.Core.Entities;
 using Library_Manager.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Mvc;
@@ -11,38 +12,39 @@ namespace Library_Manager.API.Controllers
     public class BooksController : ControllerBase
     {
         private readonly LibraryDbContext _context;
-        public BooksController(LibraryDbContext context) 
+        private readonly IBookService _service;
+        public BooksController(LibraryDbContext context, IBookService service) 
         { 
             _context = context;
+            _service = service;
         }
 
         //api/livros?quey=net core
         [HttpGet]
         public IActionResult Get(string query)
         {
-            var books = _context.Books 
-                .Where(b => b.Title.Contains(query) || b.ISBN.Contains(query))
-                .ToList();
+            var result = _service.GetAllBooks(query);
 
-            if (!books.Any())
+            if(!result.IsSuccess)
             {
-                return NotFound();
+                return NotFound(result.Message);
             }
 
-            return Ok(books);
+            return Ok(result.Data);
         }
 
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var book = _context.Books.Find(id);
-            if (book == null)
+            var result = _service.GetBookById(id);
+
+            if (!result.IsSuccess)
             {
-                return NotFound();
+                return BadRequest(result.Message);
             }
 
-            return Ok(book);
+            return Ok(result);
         }
 
         [HttpPost]
@@ -50,21 +52,16 @@ namespace Library_Manager.API.Controllers
         {
             if (createBook == null)
             {
-                return BadRequest();
+                return BadRequest("O modelo do livro não pode ser nulo.");
+            }
+            var result = _service.CreateBook(createBook);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Message);
             }
 
-            var book = new Book
-            {
-                Title = createBook.Title,
-                ISBN = createBook.ISBN,
-                Year = createBook.YearOfPublication,
-                AuthorId = createBook.AuthorId
-            };
-
-            _context.Books.Add(book);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetById), new { id = book.Id }, book);
+            return Ok();
         }
 
         [HttpPut("{id}")]

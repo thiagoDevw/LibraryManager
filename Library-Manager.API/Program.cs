@@ -1,3 +1,4 @@
+using Library_Manager.Application;
 using Library_Manager.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
@@ -9,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddDbContext<LibraryDbContext>(o => o.UseInMemoryDatabase("LibraryDb"));
 var connectionString = builder.Configuration.GetConnectionString("LibraryManagerCs");
 builder.Services.AddDbContext<LibraryDbContext>(o => o.UseSqlServer(connectionString));
+
+builder.Services
+    .AddApplication();
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
