@@ -12,5 +12,6 @@ namespace Library_Manager.Application.Models
         public string ISBN { get; set; }
         public int Year { get; set; }
         public int AuthorId { get; set; }
+        public int YearOfPublication { get; set; }
     }
 }

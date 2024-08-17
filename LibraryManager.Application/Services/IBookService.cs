@@ -13,11 +13,11 @@ namespace Library_Manager.Application.Services
 {
     internal interface IBookService
     {
-        Task<ResultViewModel> CreateBookAsync(CreateBookModels models);
-        Task<ResultViewModel> UpdateBookAsync(int id, UpdateBookModel model);
-        Task<ResultViewModel<BookDetailsModel>> GetBookByIdAsync(int id);
-        Task<ResultViewModel<IEnumerable<BookViewModel>>> GetAllBooksAsync(string query);
-        Task<ResultViewModel> DeleteBookAsync(int id);
+        ResultViewModel CreateBook(CreateBookModels models);
+        ResultViewModel UpdateBook(int id, UpdateBookModel model);
+        ResultViewModel<BookDetailsModel> GetBookById(int id);
+        ResultViewModel<IEnumerable<BookViewModel>> GetAllBooks(string query);
+        ResultViewModel DeleteBook(int id);
     }
 
     public class BookService : IBookService
@@ -28,7 +28,7 @@ namespace Library_Manager.Application.Services
             _context = context;
         }
 
-        public async Task<ResultViewModel> CreateBookAsync(CreateBookModels models)
+        public ResultViewModel CreateBook(CreateBookModels models)
         {
             if (models == null)
             {
@@ -49,21 +49,49 @@ namespace Library_Manager.Application.Services
             return ResultViewModel.Success("Livro criado com sucesso.");
         }
 
-        public Task<ResultViewModel> DeleteBookAsync(int id)
+        public ResultViewModel DeleteBook(int id)
         {
-            throw new NotImplementedException();
+            var book = _context.Books.Find(id);
+            if (book == null)
+            {
+                return ResultViewModel.NotFound("Livro não encontrado");
+            }
+
+            _context.Books.Remove(book);
+            _context.SaveChanges();
+
+            return ResultViewModel.Success("Livro removido com sucesso.");
         }
 
-        public Task<ResultViewModel> UpdateBookAsync(int id, UpdateBookModel model)
+        public ResultViewModel UpdateBook(int id, UpdateBookModel model)
         {
-            throw new NotImplementedException();
+            if (model == null)
+            {
+                return ResultViewModel.Error("Modelo inválido");
+            }
+
+            var book = _context.Books.Find(id);
+            if (book == null)
+            {
+                return ResultViewModel.NotFound("Livro não encontrado.");
+            }
+
+            book.Title = model.Title;
+            book.ISBN = model.ISBN;
+            book.Year = model.YearOfPublication;
+            book.AuthorId = model.AuthorId;
+
+            _context.Books.Update(book);
+            _context.SaveChanges();
+
+            return ResultViewModel.Success("Livro atualizado com sucesso.");
         }
 
-        public async Task<ResultViewModel<IEnumerable<BookViewModel>>> GetAllBooksAsync(string query)
+        public  ResultViewModel<IEnumerable<BookViewModel>> GetAllBooks(string query)
         {
-            var books = await _context.Books
+            var books = _context.Books
                 .Where(b => b.Title.Contains(query) || b.ISBN.Contains(query))
-                .ToListAsync();
+                .ToList();
 
             if (!books.Any())
             {
@@ -75,15 +103,32 @@ namespace Library_Manager.Application.Services
                 Id = b.Id,
                 Title = b.Title,
                 ISBN = b.ISBN,
-                // Adicione outros campos conforme necessário
             }).ToList();
 
             return ResultViewModel<IEnumerable<BookViewModel>>.Success(bookViewModels);
         }
 
-        Task<ResultViewModel<BookDetailsModel>> IBookService.GetBookByIdAsync(int id)
+        ResultViewModel<BookDetailsModel> IBookService.GetBookById(int id)
         {
-            throw new NotImplementedException();
+            var book = _context.Books
+                .Include(b => b.Author)
+                .FirstOrDefault(b => b.Id == id);
+
+            if (book == null)
+            {
+                return ResultViewModel<BookDetailsModel>.NotFound("Livro não encontrado");
+            }
+
+            var bookDetails = new BookDetailsModel
+            {
+                Id = book.Id,
+                Title = book.Title,
+                ISBN = book.ISBN,
+                Year = book.Year,
+                AuthorId = book.AuthorId,
+            };
+
+            return ResultViewModel<BookDetailsModel>.Success(bookDetails);
         }
     }
 }
