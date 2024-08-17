@@ -1,4 +1,5 @@
 ﻿using Library_Manager.Application.Models;
+using Library_Manager.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Library_Manager.Application.Services
 {
     public interface IBookService
     {
-        ResultViewModel CreateBook(CreateBookModels models);
+        ResultViewModel<Book> CreateBook(CreateBookModels models);
         ResultViewModel UpdateBook(int id, UpdateBookModel model);
         ResultViewModel<BookDetailsModel> GetBookById(int id);
         ResultViewModel<IEnumerable<BookViewModel>> GetAllBooks(string query);

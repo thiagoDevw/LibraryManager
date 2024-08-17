@@ -33,10 +33,13 @@ namespace Library_Manager.Application.Models
             Data = data;
         }
         public T? Data { get; private set; }
+
         public static ResultViewModel<T> Success(T data, string message = "")
             => new ResultViewModel<T>(data, true, message);
+
         public static ResultViewModel<T> Error(string message)
             => new(default, false, message);
+
         public static ResultViewModel<T> NotFound(string message)
             => Error(message);
     }

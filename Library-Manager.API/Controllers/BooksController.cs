@@ -50,10 +50,6 @@ namespace Library_Manager.API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] CreateBookModels createBook)
         {
-            if (createBook == null)
-            {
-                return BadRequest("O modelo do livro não pode ser nulo.");
-            }
             var result = _service.CreateBook(createBook);
 
             if (!result.IsSuccess)
@@ -61,30 +57,23 @@ namespace Library_Manager.API.Controllers
                 return BadRequest(result.Message);
             }
 
-            return Ok();
+            return CreatedAtAction(nameof(GetById), new { id = result.Data?.Id }, result.Data);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] CreateBookModels createBook)
+        public IActionResult Put(int id, [FromBody] UpdateBookModel updateBook)
         {
-            if (createBook == null)
+            if (updateBook == null)
             {
                 return BadRequest();
             }
 
-            var book = _context.Books.Find(id);
-            if (book == null)
+            var result = _service.UpdateBook(id, updateBook);
+
+            if (!result.IsSuccess)
             {
-                return NotFound();
+                return BadRequest(result.Message);
             }
-
-            book.Title = createBook.Title;
-            book.ISBN = createBook.ISBN;
-            book.Year = createBook.YearOfPublication;
-            book.AuthorId = createBook.AuthorId;
-
-            _context.Books.Update(book);
-            _context.SaveChanges();
 
             return NoContent();
         }
@@ -93,14 +82,12 @@ namespace Library_Manager.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var book = _context.Books.Find(id);
-            if (book == null)
-            {
-                return NotFound();
-            }
+            var result = _service.DeleteBook(id);
 
-            _context.Books.Remove(book);
-            _context.SaveChanges();
+            if (!result.IsSuccess)
+            {
+                return NotFound(result.Message);
+            }
 
             return NoContent();
         }
