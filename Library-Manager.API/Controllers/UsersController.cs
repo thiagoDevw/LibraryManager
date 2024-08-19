@@ -1,4 +1,5 @@
-﻿using Library_Manager.Core.Entities;
+﻿using Library_Manager.Application.Services;
+using Library_Manager.Core.Entities;
 using Library_Manager.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Models.ModelsUsers;
@@ -9,84 +10,67 @@ namespace Library_Manager.API.Controllers
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-        private readonly LibraryDbContext _context;
-        public UsersController(LibraryDbContext context)
+        private readonly IUserService _userService;
+        public UsersController(IUserService userService)
         {
-            _context = context;
+            _userService = userService;
         }
 
         // GET: api/users/{id}
         [HttpGet("{id}")]
         public IActionResult GetUserById(int id)
         {
-            var user = _context.Users.Find(id);
+            var result = _userService.GetUserById(id);
 
-            if (user == null)
+            if (!result.IsSuccess)
             {
-                return NotFound(); // Retorna 404 se o usuário não for encontrado
+                return NotFound(result.Message);
             }
 
-            return Ok(user); // Retorna 200 com o usuário encontrado
+            return Ok(result.Data);
         }
 
         //POST: api/users
         [HttpPost]
         public IActionResult PostUsers([FromBody] CreateUserModels model)
         {
-            if (model == null)
+            var result = _userService.CreateUser(model);
+
+            if (!result.IsSuccess)
             {
-                return BadRequest(); // Retorna 400 se o modelo for nulo
+                return BadRequest(result.Message);
             }
 
-            var user = new User
-            {
-                Name = model.Name,
-                Email = model.Email
-            };
-
-            _context.Users.Add(user);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetUserById), new { id = user.Id }, user);
+            return Ok(result);
         }
 
         // PUT: api/users/{id}
         [HttpPut("{id}")]
-        public IActionResult PutUser(int id, [FromBody] CreateUserModels model)
+        public IActionResult PutUser(int id, [FromBody] UpdateUserModel model)
         {
             if (model == null)
             {
-                return BadRequest();
+                return BadRequest("Modelo inválido;");
             }
+            var result = _userService.UpdateUser(id, model);
 
-            var user = _context.Users.Find(id);
-            if (user == null)
+            if (!result.IsSuccess)
             {
-                return NotFound();
+                return BadRequest(result.Message);
             }
-
-            user.Name = model.Name;
-            user.Email = model.Email;
-
-
-            _context.Users.Update(user);
-            _context.SaveChanges();
-
-            return NoContent();
+            return Ok(result);
         }
 
         // DELETE: api/users/{id}
         [HttpDelete("{id}")]
         public IActionResult DeleteUser(int id)
         {
-            var user = _context.Users.Find(id);
-            if (user == null)
-            {
-                return NoContent();
-            }
+            var result = _userService.DeleteUser(id);
 
-            _context.Users.Remove(user);
-            _context.SaveChanges();
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.Message);
+            }
 
             return NoContent();
         }

@@ -15,6 +15,7 @@ namespace Library_Manager.Application
         private static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<IBookService, BookService>();
+            services.AddScoped<IUserService, UserService>();
             return services;
         }
     }

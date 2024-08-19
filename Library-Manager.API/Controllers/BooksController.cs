@@ -1,5 +1,4 @@
 ﻿using Library_Manager.Application.Services;
-using Library_Manager.Core.Entities;
 using Library_Manager.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Models.ModelsBook;
