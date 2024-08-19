@@ -2,6 +2,7 @@
 using Library_Manager.Core.Entities;
 using Library_Manager.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using Models.ModelsBook;
 
 namespace Library_Manager.Application.Services
 {

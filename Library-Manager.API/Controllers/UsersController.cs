@@ -1,7 +1,7 @@
-﻿using Library_Manager.Application.Models;
-using Library_Manager.Core.Entities;
+﻿using Library_Manager.Core.Entities;
 using Library_Manager.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Mvc;
+using Models.ModelsUsers;
 
 namespace Library_Manager.API.Controllers
 {
