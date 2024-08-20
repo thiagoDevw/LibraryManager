@@ -20,6 +20,11 @@ namespace Library_Manager.Application.Services
                 return ResultViewModel<User>.Error("Modelo inválido.");
             }
 
+            if (EmailExists(model.Email))
+            {
+                return ResultViewModel<User>.Error("O email já está em uso.");
+            }
+
             var user = new User
             {
                 Name = model.Name,
@@ -51,6 +56,16 @@ namespace Library_Manager.Application.Services
             _context.SaveChanges();
 
             return ResultViewModel.Success("Usuário deletado com sucesso.");
+        }
+
+        public bool EmailExists(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return false;
+            }
+
+            return _context.Users.Any(u => u.Email == email);
         }
 
         public ResultViewModel<UserDetailsModel> GetUserById(int id)

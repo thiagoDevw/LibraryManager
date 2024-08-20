@@ -48,7 +48,6 @@ namespace Library_Manager.Application.Services
 
             var bookDetails = new BookDetailsModel
             {
-                Id = book.Id,
                 Title = book.Title,
                 ISBN = book.ISBN,
                 Year = book.Year,

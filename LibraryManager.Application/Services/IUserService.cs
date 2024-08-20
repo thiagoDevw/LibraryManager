@@ -10,5 +10,6 @@ namespace Library_Manager.Application.Services
         ResultViewModel<User> CreateUser(CreateUserModels model);
         ResultViewModel UpdateUser(int id, UpdateUserModel model);
         ResultViewModel DeleteUser(int id);
+        bool EmailExists(string email);
     }
 }
